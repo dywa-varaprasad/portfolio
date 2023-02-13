@@ -22,19 +22,20 @@
                <img src="./assets/logo.png" alt="logo" class="logo">
             </a>
 
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-                
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>  
+                <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
+            <h1>Hi I'm <span>Dywa</span><br> Varaprasad from India</h1>
             <p>
-               Full Stack Web Developer
+                I'm <span class="auto-type"> a Full Stack Web Developer </span>
             </p> 
-<h1>Hi<span>👋🏼</span>, I'm <span>Dywa</span><br>Varaprasad from India</h1>
         </div>
     </div>
    </header>
@@ -48,8 +49,7 @@
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis distinctio enim, eius error mollitia incidunt cupiditate alias nostrum ut quibusdam ex veniam dicta non commodi et doloremque  <br>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Assumenda, vero. Consequuntur, expedita. Maiores rem tenetur consectetur, deserunt, praesentium mollitia unde aperiam non quisquam dicta asperiores similique, <br>
-                     voluptate vel illum eos! nisi obcaecati vitae.</p>
+                    ae.</p>
             
             <div class="tab-titles">
                 <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -149,7 +149,7 @@
         <div class="layer">
             <h3>Social Media App</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-            <a href="#"><i class="fas-fa-external-link-alt"></i></a>
+            <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
         </div>
         </div>
         
@@ -158,7 +158,7 @@
             <div class="layer">
                 <h3> Media App</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-                <a href="#"><i class="fas-fa-external-link-alt"></i></a>
+                <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
             </div>
         </div>
     
@@ -168,7 +168,7 @@
             <div class="layer">
                 <h3>Music  App</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-                <a href="#"><i class="fas-fa-external-link-alt"></i></a>
+                <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
             </div>
         </div>
     </div>
@@ -182,23 +182,33 @@
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Contact me</h1>
-                <p> battudvp@gmail.com</p>
-                <p> +91 9000266002</p>
+                <p> <i class="fas fa-paper-plane"></i> battudvp@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> +91 9000266002</p>
 <div class="social-icons">
     <a href="#"><i class="fab fa-twitter"></i></a>
     <a href="#"><i class="fab fa-linkedin"></i></a>
     <a href="#"><i class="fab fa-github"></i></a>
-
 </div>
+<a href="./assets/logo.png" download class="btn btn2">Download Resume</a>
             </div>
-            <div class="contact-right"></div>
+            <div class="contact-right">
+                
+                <form action="">
+                   <input type="text" name="Name" placeholder="Your Name" required>
+                   <input type="email" name="email" placeholder="Your Email" id="" required>
+                   <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                   <Button type="submit" class="btn btn2">Submit</Button>
+                </form>
+            </div>
         </div>
     </div>
+    <footer class="copyright"><p>Copyright &copy; DVP Made with <i class="fas fa-heart"></i>  by <a href="#" style="color: red">devDVP</a></p></footer>
 </div>
 
 
 </div>
-    
+  
+
 
 
 
@@ -223,5 +233,49 @@ document.getElementById(tabname).classList.add('active-tab')
     }
 
 </script>
+
+
+<script>
+
+
+
+
+
+
+
+let sidemenu = document.getElementById('sidemenu')
+function openmenu(){
+    sidemenu.style.right='0';
+}
+
+
+function closemenu(){
+    sidemenu.style.right='-200px';
+
+}
+</script>
+
+    
+  <!-- script for typed text from typed js cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- script for typing effect from cdn -->
+  <script>
+      let typed = new Typed(".auto-type",{
+    strings:["Specialised in MERN stack", "Specialised in MERN stack",],
+      typeSpeed:120,
+      backSpeed:130,
+      loop:true    })
+  </script>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
